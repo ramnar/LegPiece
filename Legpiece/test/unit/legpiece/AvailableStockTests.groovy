@@ -1,0 +1,17 @@
+package legpiece
+
+
+
+import grails.test.mixin.*
+import org.junit.*
+
+/**
+ * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions
+ */
+@TestFor(AvailableStock)
+class AvailableStockTests {
+
+    void testSomething() {
+       fail "Implement me"
+    }
+}
