@@ -98,8 +98,8 @@
 				<h2>Stock Management:</h2>
 				<ul>
 					<li class="controller"><g:link controller="availableStock">Available Stock</g:link></li>
-					<li class="controller"><g:link controller="stockInventory">Stock Inventory</g:link></li>
-					<li class="controller"><g:link  controller="stockTransaction">Stock Transaction</g:link></li>
+					<li class="controller"><g:link controller="purchasedStock">Stock Inventory</g:link></li>
+					<li class="controller"><g:link  controller="stockTransactions">Stock Transaction</g:link></li>
 				</ul>
 			</div>
 		</div>

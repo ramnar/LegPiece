@@ -1,10 +1,10 @@
 package legpiece
 
 class AvailableStock {
-	Date receivedTime;
+	Date purchasedTime;
     ItemMaster item;
 	Double quantity;
 	static constraints = {
-		receivedTime(display : false)
+		purchasedTime(display : false)
     }
 }
