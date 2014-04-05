@@ -50,5 +50,6 @@
 				<g:paginate total="${itemMasterInstanceTotal}" />
 			</div>
 		</div>
+		<g:link controller="auth" action="logout" class="icon icon_cross">Logout</g:link>
 	</body>
 </html>
