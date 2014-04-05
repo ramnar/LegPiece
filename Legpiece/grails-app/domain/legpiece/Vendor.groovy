@@ -3,6 +3,7 @@ package legpiece
 class Vendor {
 	String name;
 	String mobileNumber;
+	String note;
 	String toString() {
 		"${name}"
 	}
