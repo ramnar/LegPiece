@@ -23,11 +23,11 @@
 			</g:if>
 			<ol class="property-list availableStock">
 			
-				<g:if test="${availableStockInstance?.receivedTime}">
+				<g:if test="${availableStockInstance?.purchasedTime}">
 				<li class="fieldcontain">
-					<span id="receivedTime-label" class="property-label"><g:message code="availableStock.receivedTime.label" default="Received Time" /></span>
+					<span id="purchasedTime-label" class="property-label"><g:message code="availableStock.purchasedTime.label" default="Purchased Time" /></span>
 					
-						<span class="property-value" aria-labelledby="receivedTime-label"><g:formatDate date="${availableStockInstance?.receivedTime}" /></span>
+						<span class="property-value" aria-labelledby="purchasedTime-label"><g:formatDate date="${availableStockInstance?.purchasedTime}" /></span>
 					
 				</li>
 				</g:if>
@@ -59,6 +59,6 @@
 				</fieldset>
 			</g:form>
 		</div>
-		<g:link controller="auth" action="logout" class="icon icon_cross">Logout</g:link>
+		<g:link controller="auth" action="logout" class="icon icon_cross">Sign Out</g:link>
 	</body>
 </html>

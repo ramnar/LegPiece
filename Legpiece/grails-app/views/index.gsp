@@ -88,6 +88,7 @@
 					<li><g:link controller="vendor">Vendors</g:link></li>
 					<li><g:link controller="itemMaster">Items</g:link></li>
 					<li><g:link controller="kitchen">Kitchen</g:link></li>
+					
 			</ul>
 		</div>
 		<div id="page-body" role="main">
@@ -103,6 +104,9 @@
 				</ul>
 			</div>
 		</div>
-		<g:link controller="auth" action="logout" class="icon icon_cross">Logout</g:link>
+		<g:if test="${user != null}">
+       <g:link controller="auth" action="logout" class="icon icon_cross">Sign Out</g:link>
+      </g:if>
+				
 	</body>
 </html>

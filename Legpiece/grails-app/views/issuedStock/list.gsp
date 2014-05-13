@@ -24,15 +24,15 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="receivedTime" title="${message(code: 'issuedStock.receivedTime.label', default: 'Received Time')}" />
-					
-						<g:sortableColumn property="quantity" title="${message(code: 'issuedStock.quantity.label', default: 'Quantity')}" />
-					
-						<g:sortableColumn property="dateCreated" title="${message(code: 'issuedStock.dateCreated.label', default: 'Date Created')}" />
+						<g:sortableColumn property="purchasedTime" title="${message(code: 'issuedStock.purchasedTime.label', default: 'Purchased Time')}" />
 					
 						<th><g:message code="issuedStock.item.label" default="Item" /></th>
 					
+						<g:sortableColumn property="quantity" title="${message(code: 'issuedStock.quantity.label', default: 'Quantity')}" />
+					
 						<th><g:message code="issuedStock.kitchen.label" default="Kitchen" /></th>
+					
+						<g:sortableColumn property="dateCreated" title="${message(code: 'issuedStock.dateCreated.label', default: 'Date Created')}" />
 					
 					</tr>
 				</thead>
@@ -40,15 +40,15 @@
 				<g:each in="${issuedStockInstanceList}" status="i" var="issuedStockInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${issuedStockInstance.id}">${fieldValue(bean: issuedStockInstance, field: "receivedTime")}</g:link></td>
-					
-						<td>${fieldValue(bean: issuedStockInstance, field: "quantity")}</td>
-					
-						<td><g:formatDate date="${issuedStockInstance.dateCreated}" /></td>
+						<td><g:link action="show" id="${issuedStockInstance.id}">${fieldValue(bean: issuedStockInstance, field: "purchasedTime")}</g:link></td>
 					
 						<td>${fieldValue(bean: issuedStockInstance, field: "item")}</td>
 					
+						<td>${fieldValue(bean: issuedStockInstance, field: "quantity")}</td>
+					
 						<td>${fieldValue(bean: issuedStockInstance, field: "kitchen")}</td>
+					
+						<td><g:formatDate date="${issuedStockInstance.dateCreated}" /></td>
 					
 					</tr>
 				</g:each>
@@ -58,6 +58,5 @@
 				<g:paginate total="${issuedStockInstanceTotal}" />
 			</div>
 		</div>
-		<g:link controller="auth" action="logout" class="icon icon_cross">Logout</g:link>
 	</body>
 </html>

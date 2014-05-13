@@ -3,6 +3,7 @@ package legpiece
 class ItemMaster {
 	String name;
 	String unitOfMeasure;
+	//static belongsTo = [vendors:Vendor]
 	Vendor vendor;//TODO:Multiple Vendors
 	String toString() {
 		"${name}"

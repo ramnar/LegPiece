@@ -32,11 +32,20 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${vendorInstance?.mobileNumber}">
+				<g:if test="${vendorInstance?.contactNumber}">
 				<li class="fieldcontain">
-					<span id="mobileNumber-label" class="property-label"><g:message code="vendor.mobileNumber.label" default="Mobile Number" /></span>
+					<span id="contactNumber-label" class="property-label"><g:message code="vendor.contactNumber.label" default="Contact Number" /></span>
 					
-						<span class="property-value" aria-labelledby="mobileNumber-label"><g:fieldValue bean="${vendorInstance}" field="mobileNumber"/></span>
+						<span class="property-value" aria-labelledby="contactNumber-label"><g:fieldValue bean="${vendorInstance}" field="contactNumber"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${vendorInstance?.comments}">
+				<li class="fieldcontain">
+					<span id="comments-label" class="property-label"><g:message code="vendor.comments.label" default="Comments" /></span>
+					
+						<span class="property-value" aria-labelledby="comments-label"><g:fieldValue bean="${vendorInstance}" field="comments"/></span>
 					
 				</li>
 				</g:if>
@@ -50,6 +59,6 @@
 				</fieldset>
 			</g:form>
 		</div>
-		<g:link controller="auth" action="logout" class="icon icon_cross">Logout</g:link>
+		<g:link controller="auth" action="logout" class="icon icon_cross">Sign Out</g:link>
 	</body>
 </html>

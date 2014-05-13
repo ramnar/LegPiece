@@ -26,7 +26,9 @@
 					
 						<g:sortableColumn property="name" title="${message(code: 'vendor.name.label', default: 'Name')}" />
 					
-						<g:sortableColumn property="mobileNumber" title="${message(code: 'vendor.mobileNumber.label', default: 'Mobile Number')}" />
+						<g:sortableColumn property="contactNumber" title="${message(code: 'vendor.contactNumber.label', default: 'Contact Number')}" />
+					
+						<g:sortableColumn property="comments" title="${message(code: 'vendor.comments.label', default: 'Comments')}" />
 					
 					</tr>
 				</thead>
@@ -36,7 +38,9 @@
 					
 						<td><g:link action="show" id="${vendorInstance.id}">${fieldValue(bean: vendorInstance, field: "name")}</g:link></td>
 					
-						<td>${fieldValue(bean: vendorInstance, field: "mobileNumber")}</td>
+						<td>${fieldValue(bean: vendorInstance, field: "contactNumber")}</td>
+					
+						<td>${fieldValue(bean: vendorInstance, field: "comments")}</td>
 					
 					</tr>
 				</g:each>
@@ -46,6 +50,6 @@
 				<g:paginate total="${vendorInstanceTotal}" />
 			</div>
 		</div>
-		<g:link controller="auth" action="logout" class="icon icon_cross">Logout</g:link>
+		<g:link controller="auth" action="logout" class="icon icon_cross">Sign Out</g:link>
 	</body>
 </html>

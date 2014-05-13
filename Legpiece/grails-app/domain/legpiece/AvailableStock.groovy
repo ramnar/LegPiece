@@ -5,6 +5,8 @@ class AvailableStock {
     ItemMaster item;
 	Double quantity;
 	static constraints = {
-		purchasedTime(display : false)
+		purchasedTime()
+		item()
+		quantity()
     }
 }

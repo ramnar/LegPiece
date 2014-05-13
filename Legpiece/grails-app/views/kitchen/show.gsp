@@ -41,6 +41,6 @@
 				</fieldset>
 			</g:form>
 		</div>
-		<g:link controller="auth" action="logout" class="icon icon_cross">Logout</g:link>
+		<g:link controller="auth" action="logout" class="icon icon_cross">Sign Out</g:link>
 	</body>
 </html>

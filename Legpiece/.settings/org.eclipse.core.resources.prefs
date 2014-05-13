@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
+encoding//.link_to_grails_plugins/jasper-1.8.0/grails-app/i18n=UTF-8
+encoding//.link_to_grails_plugins/jasper-1.8.0/grails-app/i18n/jasper.properties=UTF-8
 encoding//.link_to_grails_plugins/jquery-1.9.0/grails-app/i18n=UTF-8
 encoding//.link_to_grails_plugins/jquery-1.9.0/grails-app/i18n/messages.properties=UTF-8
 encoding//.link_to_grails_plugins/mail-1.0.1/grails-app/i18n=UTF-8
@@ -26,6 +28,8 @@ encoding//.link_to_grails_plugins/shiro-1.2.0/grails-app/i18n/messages.propertie
 encoding//.link_to_grails_plugins/twitter-bootstrap-2.3.0/grails-app/i18n=UTF-8
 encoding//.link_to_grails_plugins/twitter-bootstrap-2.3.0/grails-app/i18n/messages.properties=UTF-8
 encoding//grails-app/i18n=UTF-8
+encoding//grails-app/i18n/messages-nimble.properties=UTF-8
+encoding//grails-app/i18n/messages-nimble_de.properties=UTF-8
 encoding//grails-app/i18n/messages.properties=UTF-8
 encoding//grails-app/i18n/messages_cs_CZ.properties=UTF-8
 encoding//grails-app/i18n/messages_da.properties=UTF-8

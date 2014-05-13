@@ -9,7 +9,7 @@ class PurchasedStock {
 	Double totalPrice;//TODO
 	Vendor vendor;
     static constraints = {
-		dateCreated(display : false)
+		dateCreated(blank : false)
 		item()
 		quantity(blank : false)
 		totalPrice(blank : false)

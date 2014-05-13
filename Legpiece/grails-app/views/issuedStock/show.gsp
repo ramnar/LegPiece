@@ -23,29 +23,11 @@
 			</g:if>
 			<ol class="property-list issuedStock">
 			
-				<g:if test="${issuedStockInstance?.receivedTime}">
+				<g:if test="${issuedStockInstance?.purchasedTime}">
 				<li class="fieldcontain">
-					<span id="receivedTime-label" class="property-label"><g:message code="issuedStock.receivedTime.label" default="Received Time" /></span>
+					<span id="purchasedTime-label" class="property-label"><g:message code="issuedStock.purchasedTime.label" default="Purchased Time" /></span>
 					
-						<span class="property-value" aria-labelledby="receivedTime-label"><g:formatDate date="${issuedStockInstance?.receivedTime}" /></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${issuedStockInstance?.quantity}">
-				<li class="fieldcontain">
-					<span id="quantity-label" class="property-label"><g:message code="issuedStock.quantity.label" default="Quantity" /></span>
-					
-						<span class="property-value" aria-labelledby="quantity-label"><g:fieldValue bean="${issuedStockInstance}" field="quantity"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${issuedStockInstance?.dateCreated}">
-				<li class="fieldcontain">
-					<span id="dateCreated-label" class="property-label"><g:message code="issuedStock.dateCreated.label" default="Date Created" /></span>
-					
-						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${issuedStockInstance?.dateCreated}" /></span>
+						<span class="property-value" aria-labelledby="purchasedTime-label"><g:formatDate date="${issuedStockInstance?.purchasedTime}" /></span>
 					
 				</li>
 				</g:if>
@@ -59,11 +41,29 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${issuedStockInstance?.quantity}">
+				<li class="fieldcontain">
+					<span id="quantity-label" class="property-label"><g:message code="issuedStock.quantity.label" default="Quantity" /></span>
+					
+						<span class="property-value" aria-labelledby="quantity-label"><g:fieldValue bean="${issuedStockInstance}" field="quantity"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${issuedStockInstance?.kitchen}">
 				<li class="fieldcontain">
 					<span id="kitchen-label" class="property-label"><g:message code="issuedStock.kitchen.label" default="Kitchen" /></span>
 					
 						<span class="property-value" aria-labelledby="kitchen-label"><g:link controller="kitchen" action="show" id="${issuedStockInstance?.kitchen?.id}">${issuedStockInstance?.kitchen?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${issuedStockInstance?.dateCreated}">
+				<li class="fieldcontain">
+					<span id="dateCreated-label" class="property-label"><g:message code="issuedStock.dateCreated.label" default="Date Created" /></span>
+					
+						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${issuedStockInstance?.dateCreated}" /></span>
 					
 				</li>
 				</g:if>
@@ -77,6 +77,5 @@
 				</fieldset>
 			</g:form>
 		</div>
-		<g:link controller="auth" action="logout" class="icon icon_cross">Logout</g:link>
 	</body>
 </html>

@@ -11,6 +11,7 @@ class IssuedStock {
 		item()
 		quantity(blank : false)
 		kitchen()
+		dateCreated(blank : false, display : true)
 	}
 	static mapping = {
 		autoTimestamp true

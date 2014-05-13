@@ -58,5 +58,6 @@
 				<g:paginate total="${purchasedStockInstanceTotal}" />
 			</div>
 		</div>
+		<g:link controller="auth" action="logout" class="icon icon_cross">Sign Out</g:link>
 	</body>
 </html>

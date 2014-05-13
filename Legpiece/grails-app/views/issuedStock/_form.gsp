@@ -2,12 +2,12 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: issuedStockInstance, field: 'receivedTime', 'error')} required">
-	<label for="receivedTime">
-		<g:message code="issuedStock.receivedTime.label" default="Received Time" />
+<div class="fieldcontain ${hasErrors(bean: issuedStockInstance, field: 'item', 'error')} required">
+	<label for="item">
+		<g:message code="issuedStock.item.label" default="Item" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="receivedTime" precision="day"  value="${issuedStockInstance?.receivedTime}"  />
+	<g:select id="item" name="item.id" from="${legpiece.ItemMaster.list()}" optionKey="id" required="" value="${issuedStockInstance?.item?.id}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: issuedStockInstance, field: 'quantity', 'error')} required">
@@ -16,14 +16,6 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:field name="quantity" value="${fieldValue(bean: issuedStockInstance, field: 'quantity')}" required=""/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: issuedStockInstance, field: 'item', 'error')} required">
-	<label for="item">
-		<g:message code="issuedStock.item.label" default="Item" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="item" name="item.id" from="${legpiece.ItemMaster.list()}" optionKey="id" required="" value="${issuedStockInstance?.item?.id}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: issuedStockInstance, field: 'kitchen', 'error')} required">

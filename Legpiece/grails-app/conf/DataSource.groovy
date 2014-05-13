@@ -2,7 +2,7 @@ dataSource {
     pooled = true
     driverClassName = "org.h2.Driver"
     username = "sa"
-    password = ""
+    password = "sa"
 }
 hibernate {
     cache.use_second_level_cache = true

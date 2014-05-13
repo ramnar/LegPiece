@@ -2,6 +2,14 @@
 
 
 
+<div class="fieldcontain ${hasErrors(bean: availableStockInstance, field: 'purchasedTime', 'error')} required">
+	<label for="purchasedTime">
+		<g:message code="availableStock.purchasedTime.label" default="Purchased Time" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:datePicker name="purchasedTime" precision="day"  value="${availableStockInstance?.purchasedTime}"  />
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: availableStockInstance, field: 'item', 'error')} required">
 	<label for="item">
 		<g:message code="availableStock.item.label" default="Item" />

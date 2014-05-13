@@ -24,7 +24,7 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="receivedTime" title="${message(code: 'availableStock.receivedTime.label', default: 'Received Time')}" />
+						<g:sortableColumn property="purchasedTime" title="${message(code: 'availableStock.purchasedTime.label', default: 'Purchased Time')}" />
 					
 						<th><g:message code="availableStock.item.label" default="Item" /></th>
 					
@@ -36,7 +36,7 @@
 				<g:each in="${availableStockInstanceList}" status="i" var="availableStockInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${availableStockInstance.id}">${fieldValue(bean: availableStockInstance, field: "receivedTime")}</g:link></td>
+						<td><g:link action="show" id="${availableStockInstance.id}">${fieldValue(bean: availableStockInstance, field: "purchasedTime")}</g:link></td>
 					
 						<td>${fieldValue(bean: availableStockInstance, field: "item")}</td>
 					
@@ -50,6 +50,6 @@
 				<g:paginate total="${availableStockInstanceTotal}" />
 			</div>
 		</div>
-		<g:link controller="auth" action="logout" class="icon icon_cross">Logout</g:link>
+		<g:link controller="auth" action="logout" class="icon icon_cross">Sign Out</g:link>
 	</body>
 </html>
